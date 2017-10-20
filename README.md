@@ -4,7 +4,15 @@ Container for [remoll](https://github.com/JeffersonLab/remoll) software used in 
 
 **Note**: This image will allow you to use remoll in batch mode only. A separate image supporting the GUI mode will be available soon.
 
-### Running remoll with docker
+### Building
+
+```
+docker build -t remoll .
+```
+
+### Running
+
+You can use a prebuilt image [available on Docker Hub](https://hub.docker.com/r/jeffersonlab/remoll/).
 
 ```
 docker run --rm \
@@ -13,4 +21,3 @@ docker run --rm \
 ```
 
 The root files produced by remoll will be present in the output directory.
-
