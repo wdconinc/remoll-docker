@@ -21,6 +21,7 @@ RUN mkdir map_directory && \
 
 # Create entry point bash script
 RUN echo '#!/bin/bash'                                > /entrypoint.sh && \
+    echo 'unset OSRELEASE                             >> /entrypoint.sh && \
     echo 'source $JLAB_ROOT/$JLAB_VERSION/ce/jlab.sh' >> /entrypoint.sh && \
     echo 'cd $REMOLL && exec ./build/remoll $1'  >> /entrypoint.sh && \
     chmod +x /entrypoint.sh
